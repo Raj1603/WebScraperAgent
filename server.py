@@ -35,6 +35,22 @@
 
 #---------------------------------  2nd version ----------------
 
+import subprocess, os, sys
+
+def ensure_playwright_installed():
+    chromium_path = "/opt/render/.cache/ms-playwright/chromium-1187/chrome-linux/chrome"
+    if not os.path.exists(chromium_path):
+        print("⚙️ Playwright Chromium not found, installing...")
+        try:
+            subprocess.run([sys.executable, "-m", "playwright", "install", "chromium"], check=True)
+            print("✅ Chromium installed successfully.")
+        except subprocess.CalledProcessError as e:
+            print(f"❌ Failed to install Chromium: {e}")
+            raise
+
+ensure_playwright_installed()
+
+
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from crawler.models import CrawlRequest, CrawlResponse
