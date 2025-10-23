@@ -92,3 +92,10 @@ uvicorn==0.37.0
 xxhash==3.6.0
 yarl==1.22.0
 zipp==3.23.0
+fastapi==0.119.0
+uvicorn==0.37.0
+crawl4ai==0.7.4
+playwright==1.55.0
+tf-playwright-stealth==1.2.0
+openai==2.3.0
+python-dotenv==1.1.1
