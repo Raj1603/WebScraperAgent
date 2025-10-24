@@ -10,9 +10,8 @@ RUN apt-get update && \
     libcups2 libxkbcommon0 libxcomposite1 libxdamage1 libxrandr2 \
     libgbm1 libasound2 libpangocairo-1.0-0 libgtk-3-0 \
     libx11-6 libx11-xcb1 libxext6 libxfixes3 libxrender1 \
-    libxrandr2 libxcb1 libxkbcommon0 libatspi2.0-0 \
-    libcairo2 libpango-1.0-0 libglib2.0-0 libgobject-2.0-0 \
-    libgio-2.0-0 libdbus-1-3 libexpat1 libsmime3 \
+    libxcb1 libatspi2.0-0 libcairo2 libpango-1.0-0 \
+    libglib2.0-0 libgobject-2.0-0 libgio-2.0-0 libdbus-1-3 libexpat1 \
     fonts-liberation xvfb && \
     rm -rf /var/lib/apt/lists/*
 
